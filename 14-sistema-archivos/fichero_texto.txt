@@ -1,0 +1,15 @@
+************* Soy un texto introducido desde Python ***************
+4
+************* Soy un texto introducido desde Python ***************
+************* Soy un texto introducido desde Python ***************
+6
+101
+
+************* Soy un texto introducido desde Python ***************
+************* Soy un texto introducido desde Python ***************
+************* Soy un texto introducido desde Python ***************
+************* Soy un texto introducido desde Python ***************
+************* Soy un texto introducido desde Python ***************
+************* Soy un texto introducido desde Python ***************
+************* Soy un texto introducido desde Python ***************
+************* Soy un texto introducido desde Python ***************
