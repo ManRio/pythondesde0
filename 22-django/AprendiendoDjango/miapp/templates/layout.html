@@ -22,10 +22,10 @@
         </header>
         <nav id="menu">
             <ul>
-                <li><a href="/">Inicio</a></li>
-                <li><a href="/hola-mundo">Hola Mundo</a></li>
-                <li><a href="/pagina">Página</a></li>
-                <li><a href="/contacto">Contacto</a></li>
+                <li><a href="{% url 'inicio' %}">Inicio</a></li>
+                <li><a href="{% url 'hola_mundo' %}">Hola Mundo</a></li>
+                <li><a href="{% url 'pagina' %}">Página</a></li>
+                <li><a href="{% url 'contacto' %}">Contacto</a></li>
             </ul>
         </nav>
         <div class="barra">
@@ -44,7 +44,7 @@
         </div>
         <footer>
             <p>Master en Python</p>
-            <p>Desarrollado por ManRio &copy; 2024</p>
+            <p>Desarrollado por ManRio &copy; - {% now "Y" %} </p>
         </footer>
     </body>
 </html>

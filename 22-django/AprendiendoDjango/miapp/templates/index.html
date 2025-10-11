@@ -1,9 +1,30 @@
 {% extends 'layout.html' %}
-{% block title %}Inicio{% endblock %}
+{% block title %}{{title}}{% endblock %}
 {% block content %}
 
-<h1 class="title">Inicio</h1>
-    <p> Años hasta el 2050</p>
+
+<h1 class="title">{{title}}</h1>
+
+    <p><strong>{{ mi_variable }}</strong></p>
+    {% comment "Condicionales en Django" %}{% endcomment %}
+    {% if nombre and nombre == 'Manuel Ríos' %}
+        <p>{{nombre}}</p>
+    {% else %}
+        <p>Nombre no encontrado o no coincide</p>
+    {% endif %}
+
+    {% comment "Bucles for" %}{% endcomment %}
+    <h3>Listado Lenguajes de programación</h3>
     <ul>
+        {% for lenguaje in lenguajes %}
+            <li>{{forloop.counter}}. {{lenguaje}}</li>
+        {% empty %}
+            <li>No hay lenguajes de programación</li>
+        {% endfor %}
+    </ul>
+
+{% comment "Esto es un comentario en Django" %}{% endcomment %}
+
+{% include "fecha-actual.html" with saludo="Hola Mundo desde una plantilla: " %}
 
 {% endblock %}

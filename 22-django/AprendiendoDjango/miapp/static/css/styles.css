@@ -9,6 +9,23 @@ body {
   background-color: #f2f2f2;
 }
 
+.box p,
+.box h2,
+.box h3,
+.box ul {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.box ul,
+.box ol {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+.box li {
+  list-style: none;
+}
+
 /*Estilos Cabecera*/
 header {
   width: 1212px;
