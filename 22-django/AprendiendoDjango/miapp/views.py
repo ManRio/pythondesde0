@@ -6,7 +6,7 @@ from django.shortcuts import render, HttpResponse, redirect
 
 """
 - MVC = Modelo Vista Controlador
-- MVT = Modelo Vista Template 
+- MVT = Modelo Vista Template
 En el MVT el controlador lo maneja Django y se le llama Vista (views.py)
 """
 layout = """
@@ -35,23 +35,15 @@ def index(request):
         html += f"<li>{str(year)}</li>"
         year += 1
     html += "</ul>"
-    return HttpResponse(layout + html)
+    return render(request, "index.html")
 
 def hola_mundo(request):
-    return HttpResponse(layout + """
-        <h1>Hola Mundo con Django!!</h1>
-        <h3>Soy Manuel Ríos</h3>
-        <p>Esto es mi primera web con Django</p>
-        <p>Estamos en el curso de Master en Python</p>
-    """)
+    return render(request, "hola_mundo.html")
 
 def pagina(request, redirigir=0):
     if redirigir == 1:
         return redirect('contacto', nombre="Manuel", apellidos="Ríos")
-    return HttpResponse(layout + """
-        <h1>Página de mi web</h1>
-        <p>Creado por Manuel Ríos</p>
-    """)
+    return render(request, "pagina.html")
 
 def contacto(request, nombre="", apellidos=""):
     html = "<h3>Sin datos de contacto</h3>"
