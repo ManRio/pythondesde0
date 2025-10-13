@@ -57,7 +57,10 @@ def hola_mundo(request):
 def pagina(request, redirigir=0):
     if redirigir == 1:
         return redirect('contacto', nombre="Manuel", apellidos="Ríos")
-    return render(request, "pagina.html")
+    return render(request, "pagina.html", {
+        'texto': '',
+        'lista': ['uno', 'dos', 'tres', 'cuatro', 'cinco']
+    })
 
 def contacto(request, nombre="", apellidos=""):
     html = "<h3>Sin datos de contacto</h3>"

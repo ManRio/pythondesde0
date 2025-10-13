@@ -1,5 +1,16 @@
 {% extends "layout.html" %} {% block title %}Página de pruebas{% endblock %}
 {% block content %}
 <h1 class="title">Página de mi web</h1>
-<p>Creado por Manuel Ríos</p>
+<p>{{ "Creado por Manuel Ríosñ"|cut:"ñ" }}</p>
+<p>{{ texto |default:"No hay texto que mostrar"}}</p>
+<p>{{ lista|first }}</p>
+<p>{{ lista|join:', '}}</p>
+<p>{{ "texto pruebas"|length }}</p>
+<p>{{ "texto pruebas"|upper }}</p>
+<p>{{ lista|random}}</p>
+<p>{{ "<h1>texto</h1> <strong>pruebas</strong>"|striptags|wordcount }}</p>
+
+{% load filters %}
+{{ "Manuel"|saludo|safe }}
+
 {% endblock %}
