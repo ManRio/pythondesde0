@@ -2,6 +2,7 @@ from django.shortcuts import render, HttpResponse, redirect
 from miapp.models import Article
 from django.db.models import Q
 from miapp.forms import FormArticle
+from django.contrib import messages
 
 # Create your views here.
 
@@ -102,11 +103,13 @@ def create_full_article(request):
             articulo.save()
 
             #return HttpResponse(f"Artículo creado: {articulo.title} - {articulo.content} - {articulo.public}")
+
+            #Crear mensaje flash
+            messages.success(request, f"Artículo creado correctamente: {articulo.id} - {articulo.title} - {articulo.content}")
+
             return redirect('articulos')
     else:
         formulario = FormArticle()
-
-    formulario = FormArticle()
 
     return render(request, "create_full_article.html", {
         'form': formulario

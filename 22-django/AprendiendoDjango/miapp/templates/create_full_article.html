@@ -1,7 +1,13 @@
 {% extends "layout.html" %} {% block title %}Formularios en Django{% endblock %}
 {% block content %}
 <h1 class="title">Formularios en Django</h1>
-<form action="{% url 'save_article' %}" method="POST">
+
+{% if form.errors %}
+    <strong class="rojo">Hay errores en el formulario. Por favor, revíselo.</strong>
+    <br />
+{% endif %}
+
+<form action="{% url 'create_full_article' %}" method="POST">
 
     {% csrf_token %}
 
