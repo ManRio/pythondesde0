@@ -11,7 +11,8 @@
         {% endblock %}
         | Manuel Ríos
     </title>
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}?v=3">
+</head>
     <body>
         <!--Cabecera de la página-->
         <header>
@@ -25,6 +26,7 @@
             <ul>
                 <li><a href="{% url 'inicio' %}">Inicio</a></li>
                 <li><a href="{% url 'articulos' %}">Articulos</a></li>
+                <li><a href="{% url 'create_full_article' %}">Crear Articulos</a></li>
                 <li><a href="{% url 'hola_mundo' %}">Hola Mundo</a></li>
                 <li><a href="{% url 'pagina' %}">Página</a></li>
                 <li><a href="{% url 'contacto' %}">Contacto</a></li>
