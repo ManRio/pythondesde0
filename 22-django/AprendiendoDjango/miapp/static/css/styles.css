@@ -9,6 +9,11 @@ body {
   background-color: #f2f2f2;
 }
 
+.clearfix{
+  clear: both;
+  float: none;
+}
+
 /*Estilos Cabecera*/
 header {
   width: 1212px;
@@ -208,4 +213,57 @@ footer {
   text-align: center;
   font-weight: bold;
   box-shadow: 0px 0px 5px #444;
+}
+
+.article-item{
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  clear: both;
+}
+.article-item .image{
+  width: 200px;
+  height: 200px;
+  float: left;
+  overflow: hidden;
+}
+.article-item .image img{
+  height: 200px;
+}
+.article-item .data{
+  float: left;
+  padding: 15px;
+  padding-top: 0;
+}
+
+.article-item h2{
+  display: block;
+  font-size: 25px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.article-item span.date{
+  display: block;
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.article-item .btn{
+  padding: 10px;
+  background-color: #a92b2bff;
+  color: white;
+  border: 1px solid #831f1fff;
+  text-decoration: none;
+  display: block;
+  margin-top: 15px;
+  width: 100px;
+  text-align: center;
+}
+.article-item .btn:hover{
+  background-color: #831f1fff;
+  box-shadow: 0px 0px 5px #444;
+  transition: all 0.3s ease;
 }
