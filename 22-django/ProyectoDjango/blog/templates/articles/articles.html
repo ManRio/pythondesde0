@@ -1,0 +1,34 @@
+{% for article in articles %}
+
+    <article class="article-item">
+
+        {% if article.image != 'null' and article.image.url|length >= 1 %}
+            <div class="image" >
+                <img src="{{ article.image.url }}" alt="Imagen del artículo {{ article.title }}">
+            </div>
+        {% endif %}
+
+        <div class="data">
+            <h2 class="title">
+                <a href="{% url 'article' article.id %}">{{ article.title }}</a>
+            </h2>
+            <p>
+                {% for category in article.categories.all %}
+                    <a href="" >{{ category}}</a>
+                    {% if forloop.counter < article.categories.all|length %}
+                        {{"--"}}
+                    {% endif %}
+
+                {% endfor %}
+            </p>
+            <span class="date">
+                {{article.user.username}} {{article.user.last_name}}
+                |
+                {{ article.created_at }}
+            </span>
+            <p >
+                {{ article.content|safe}}
+            </p>
+        </div>
+    </article>
+{% endfor %}

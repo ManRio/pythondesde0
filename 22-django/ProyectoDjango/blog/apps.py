@@ -1,7 +1,7 @@
 from django.apps import AppConfig
 
 
-class PagesConfig(AppConfig):
+class BlogConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'pages'
-    verbose_name = "Gestor de Páginas"
+    name = 'blog'
+    verbose_name = "Gestión del Blog"

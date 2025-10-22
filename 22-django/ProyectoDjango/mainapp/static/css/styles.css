@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: font-family: Arial, Helvetica, sans-serif
+  font-family: font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
 }
 
@@ -54,15 +54,16 @@ nav {
   box-shadow: 0px 22px 22px #888888;
   font-size: 15px;
 }
-nav ul {
+nav > ul {
   list-style: none;
   text-decoration: none;
 }
-nav ul li {
+nav > ul > li {
   line-height: 40px;
   float: left;
+  position: relative;
 }
-nav ul li a {
+nav > ul > li > a {
   display: block;
   padding-right: 20px;
   padding-left: 20px;
@@ -70,11 +71,48 @@ nav ul li a {
   text-decoration: none;
   transition: all 0.3s ease;
 }
-nav ul li a:hover {
+nav > ul > li > a:hover {
   background-color: #2ba977;
   box-shadow: 0px 0px 5px #444 inset;
   color: white;
   transition: all 0.3s ease;
+}
+
+nav > ul > li > ul {
+  display: none;
+  position: absolute;
+  color: #d1d4d6;
+  text-align: left;
+  width: 160px;
+  box-shadow: 0px 0px 22px #888888;
+  z-index: 1000;
+}
+
+nav > ul > li:hover > ul {
+  display: block;
+  color: #d1d4d6;
+  margin: 0;
+  background-color: #1b1e1f;
+  list-style: none;
+}
+nav > ul > li:hover > ul > li {
+  background-color: #f2f1f0;
+  border-bottom: 1px solid #d6d6d6;
+  padding: 8px;
+  line-height: 25px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+nav > ul > li:hover > ul > li > a {
+  display: block;
+  color: #666;
+  transition: all 0.3s ease;
+}
+nav > ul > li:hover > ul > li:hover {
+  display: block;
+  background-color: #2ba977;
+  color: white;
 }
 
 .barra {
@@ -174,7 +212,22 @@ nav ul li a:hover {
   box-shadow: 0px 0px 5px #444;
   color: white;
   transform: scale(1.1);
-  
+}
+.box a{
+  color: #444;
+  transition: all 0.3s ease;
+}
+.box a:hover{
+  color: #2ba977;
+}
+
+.box .image{
+  float: left;
+  margin-right: 40px;
+  width: 45%;
+}
+.box .image img{
+  width: 100%;
 }
 
 
@@ -184,6 +237,18 @@ nav ul li a:hover {
   font-size: 30px;
   margin-bottom: 10px;
   margin-top: 5px;
+}
+.date {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: #888;
+  font-size: 14px;
+}
+
+.content {
+  line-height: 25px;
+  font-size: 16px;
 }
 
 /* Estilos Pie de Página */
@@ -210,7 +275,7 @@ footer {
   padding: 10px;
   margin-bottom: 15px;
   border-radius: 5px;
-  width: 50%
+  width: 50%;
   margin: 0 auto;
   text-align: center;
   font-weight: bold;
@@ -218,6 +283,7 @@ footer {
 }
 
 .article-item{
+  display: flex;
   margin-bottom: 20px;
   margin-top: 20px;
   padding: 15px;

@@ -1,0 +1,16 @@
+{% extends "layouts/layout.html" %}
+{% block title %} {{article.title}} {% endblock %}
+
+{% block content %}
+
+    {% if article.image != 'null' and article.image.url|length >= 1 %}
+        <div class="image" >
+            <img src="{{ article.image.url }}" alt="Imagen del artículo {{ article.title }}">
+        </div>
+    {% endif %}
+
+<h1 class="title">{{article.title}}</h1>
+<span class="date">Publicado el {{article.created_at}}</span>
+<p class="content">{{article.content|safe}}</p>
+
+{% endblock %}
