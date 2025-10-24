@@ -186,6 +186,8 @@ nav > ul > li:hover > ul > li:hover {
 
 }
 .box form input[type='text'],
+.box form input[type='email'],
+.box form input[type='password'],
 .box form textarea,
 .box form select {
   width: 100%;
@@ -268,18 +270,20 @@ footer {
   color: red;
 }
 
-.message {
-  background-color: #d4edda;
-  color: #155724;
-  border: 1px solid #c3e6cb;
-  padding: 10px;
-  margin-bottom: 15px;
-  border-radius: 5px;
-  width: 50%;
-  margin: 0 auto;
+.message,
+.alert-succes,
+.alert {
+  padding: 20px;
+  background-color: #1f7e58;
+  color: white;
   text-align: center;
-  font-weight: bold;
-  box-shadow: 0px 0px 5px #444;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.alert-warning{
+  background-color: #eb8787ff;
 }
 
 .article-item{
