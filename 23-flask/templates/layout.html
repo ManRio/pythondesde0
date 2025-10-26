@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %} | Master en Python | Flask {% endblock %} </title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+  </head>
+    <body>
+        <!--Cabecera de la página-->
+        <header>
+            <div id="logotipo">
+                <!--Logo Django-->
+                <img src="{{ url_for('static', filename='images/flask.png') }}" alt="Logotipo">
+                <h1>Proyecto con Flask</h1>
+            </div>
+        </header>
+        <nav id="menu">
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="{{url_for('informacion')}}">Información</a></li>
+                <li><a href="{{url_for('contacto')}}">Contacto</a></li>
+                <li><a href="{{url_for('lenguajes')}}">Lenguajes de Programacion</a></li>
+            </ul>
+        </nav>
+        <div class="barra">
+            <span class="esquina-izquierda"></span>
+            <span class="relleno-barra"></span>
+            <span class="esquina-derecha"></span>
+        </div>
+
+        <div id="content">
+            <div class="box">
+                {% block content %}
+                    <!--Código que viene de templates-->
+                    <strong>Contenido del bloque original</strong>
+                {% endblock %}
+            </div>
+        </div>
+        <footer>
+            <p>Master en Python</p>
+            <p>Desarrollado por ManRio &copy; - {{ now.month }} / {{ now.year }} </p>
+        </footer>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block title %}
+  index
+  {{ super() }}
+{% endblock %}
+
+{% block content %}
+  <h1>Aprendiendo flask</h1>
+
+  {% if edad >= 18 %}
+    <h2>Eres mayor de edad</h2>
+  {% else %}
+    <h2>Eres menor de edad</h2>
+  {% endif %}
+  
+  <p> Tu edad es: {{edad}} </p>
+
+  <h2>Listado de personas</h2>
+  <ul>
+    {% for persona in personas %}
+      <li>{{loop.index}}. {{persona}}</li>
+    {% endfor %}
+  </ul>
+
+  <h2>Variables pasadas desde la vista</h2>
+
+  <p>{{dato1}}</p>
+  <p>{{dato2}}</p>
+  <ul>
+    {% for elemento in lista %}
+      <li>{{loop.index}}. {{elemento}}</li>
+    {% endfor %}
+  </ul>
+
+  {# Comentario en una linea en Flask #}
+  {# Comentario en
+     varias lineas
+     en Flask
+  #}
+
+{% endblock %}
+
+
+
