@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block title %}
+  {{coche.2}}
+  {{ super() }}
+{% endblock %}
+
+{% block content %}
+  <h1>Coche Seleccionado</h1>
+  <p>Aquí estan los detalles del coche que has seleccionado:</p>
+
+        <article class="article-item">
+            <div class="data">
+                <h2 class="title"> {{coche.1}} {{coche.2}} </h2>
+                <span class="date">Precio: {{coche.3}}€</span>
+                <p>Ciudad: {{coche.4}}</p>
+            </div>
+        </article>
+
+
+{% endblock %}
+

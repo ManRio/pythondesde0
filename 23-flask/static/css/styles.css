@@ -323,18 +323,22 @@ footer {
   margin-bottom: 10px;
 }
 
-.article-item .btn{
+.btn{
   padding: 10px;
-  background-color: #a92b2bff;
-  color: white;
-  border: 1px solid #831f1fff;
-  text-decoration: none;
+  background: rgb(207, 48, 48);
+  color: white !important;
+  border: 1px solid black;
   display: block;
   margin-top: 15px;
   width: 100px;
   text-align: center;
+  text-decoration: none;
 }
-.article-item .btn:hover{
+.btn-warning{
+  background: rgb(243, 162, 32);
+}
+
+.btn:hover{
   background-color: #831f1fff;
   box-shadow: 0px 0px 5px #444;
   transition: all 0.3s ease;
